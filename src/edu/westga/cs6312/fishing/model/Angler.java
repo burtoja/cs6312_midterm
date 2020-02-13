@@ -10,49 +10,51 @@ package edu.westga.cs6312.fishing.model;
 public class Angler {
 	private int moneyLeft;
 	private int totalFishCaught;
-	
+
 	/**
 	 * Constructor for Angler objects
 	 *
-	 * Precondition:	none
+	 * @precondition none
 	 *
-	 * Postcondition:	new Angler object created with no fish and 100 units of money
+	 * @postcondition new Angler object created with no fish and 100 units of money
 	 */
 	public Angler() {
 		this.moneyLeft = 100;
 		this.totalFishCaught = 0;
 	}
-	
+
 	/**
-	 * @return	amount of money units left
-	 *	
-	 * Precondition:	none
+	 * @return amount of money units left
+	 * 
+	 * @precondition none
 	 *
-	 * Postcondition:	no change in object
+	 * @postcondition no change in object
 	 */
 	public int getMoney() {
 		return this.moneyLeft;
 	}
-	
+
 	/**
-	 * @return	number of fish caught by the Angler
+	 * @return number of fish caught by the Angler
 	 *
-	 * Precondition:	none	
+	 * @precondition none
 	 *
-	 * Postcondition:	no change in object
+	 * @postcondition no change in object
 	 */
 	public int getFishCaught() {
 		return this.totalFishCaught;
 	}
-	
+
 	/**
-	 * This method adjusts the amount of money units stored in the object by deducting the amount of costToFish
+	 * This method adjusts the amount of money units stored in the object by
+	 * deducting the amount of costToFish
 	 * 
-	 * @param costToFish	the amount of money units to be deducted from Angler money to fish at location
+	 * @param costToFish the amount of money units to be deducted from Angler money
+	 *                   to fish at location
 	 *
-	 * Precondition:	costToFish >= 0 && costToFish <= this.moneyLeft
+	 * @precondition costToFish >= 0 && costToFish <= this.moneyLeft
 	 *
-	 * Postcondition:	this.MoneyLeft is reduced by amount of costToFish
+	 * @postcondition this.MoneyLeft is reduced by amount of costToFish
 	 */
 	public void payToFish(int costToFish) {
 		if (costToFish < 0) {
@@ -63,15 +65,16 @@ public class Angler {
 		}
 		this.moneyLeft -= costToFish;
 	}
-	
+
 	/**
 	 * This method adds fish caught to the total maintained by the Angler object
 	 * 
-	 * @param numberOfFishCaught	the number of fish caught at the fishing hole
+	 * @param numberOfFishCaught the number of fish caught at the fishing hole
 	 *
-	 * Precondition:	numberOfFishCaught >= 0
+	 * @precondition numberOfFishCaught >= 0
 	 *
-	 * Postcondition:	this.totalFishCaught is increased by the value of numberOfFishCaught
+	 * @postcondition this.totalFishCaught is increased by the value of
+	 *                numberOfFishCaught
 	 */
 	public void catchFish(int numberOfFishCaught) {
 		if (numberOfFishCaught < 0) {
@@ -79,15 +82,15 @@ public class Angler {
 		}
 		this.totalFishCaught += numberOfFishCaught;
 	}
-	
+
 	/**
 	 * This method will return a string representation of the object variables
 	 * 
-	 * @return	string representation of object variables
+	 * @return string representation of object variables
 	 *
-	 * Precondition:	none
+	 * @precondition none
 	 *
-	 * Postcondition:	no change to the object
+	 * @postcondition no change to the object
 	 */
 	@Override
 	public String toString() {

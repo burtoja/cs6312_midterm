@@ -1,7 +1,8 @@
 package edu.westga.cs6312.fishing.model;
 
 /**
- * This abstract class defines variables and methods for objects of type FishType
+ * This abstract class defines variables and methods for objects of type
+ * FishType
  * 
  * @author J. Allen Burton
  * @version Feb 13, 2020
@@ -16,10 +17,10 @@ public abstract class FishType {
 	 *
 	 * @param initialSizeOfSchool the initial number of fish in the school
 	 *
-	 *                            Precondition: initialSizeOfSchool >= 0
+	 * @postcondition initialSizeOfSchool >= 0
 	 *
-	 *                            Postcondition: FishType object created with the
-	 *                            size of the school set to initialSizeOfSchool
+	 * @precondition FishType object created with the size of the school set to
+	 *               initialSizeOfSchool
 	 */
 	public FishType(int initialSizeOfSchool) {
 		if (initialSizeOfSchool < 0) {
@@ -33,9 +34,9 @@ public abstract class FishType {
 	 * 
 	 * @return number of fish in the school
 	 *
-	 *         Precondition: none
+	 * @postcondition none
 	 *
-	 *         Postcondition: no change to object
+	 * @precondition no change to object
 	 */
 	public int getSizeOfSchool() {
 		return this.sizeOfSchool;
@@ -47,10 +48,10 @@ public abstract class FishType {
 	 * 
 	 * @param numberOfFishToRemove
 	 *
-	 *                             Precondition: numberOfFishToRemove >= 0
+	 * @postcondition numberOfFishToRemove >= 0
 	 *
-	 *                             Postcondition: the number of fish in the school
-	 *                             is deceased by numberOfFishToRemove
+	 * @precondition the number of fish in the school is deceased by
+	 *               numberOfFishToRemove
 	 */
 	public void removeFish(int numberOfFishToRemove) {
 		if (numberOfFishToRemove < 0) {
@@ -58,34 +59,35 @@ public abstract class FishType {
 		}
 		this.sizeOfSchool -= numberOfFishToRemove;
 	}
-	
+
 	/**
-	 * Abstract method to require subclasses to include a method to 
-	 * deal with catching fish.  It should return the number of fish caught.
+	 * Abstract method to require subclasses to include a method to deal with
+	 * catching fish. It should return the number of fish and reduces the number in
+	 * the school by that number.
 	 * 
-	 * @return	number of fish caught
+	 * @return number of fish caught
 	 *
-	 * Precondition:	none
+	 * @postcondition none
 	 *
-	 * Postcondition:	sizeOfSchool will increase by the amount of fish caught
+	 * @precondition sizeOfSchool will decrease by the amount of fish caught
 	 */
 	public abstract int catchFish();
-	
+
 	/**
-	 * Abstract method to require subclasses to include a method to
-	 * deal with supplying the cost associated with fishing this kind of fish
+	 * Abstract method to require subclasses to include a method to deal with
+	 * supplying the cost associated with fishing this kind of fish
 	 * 
-	 * @return	the cost associated with fishing this type of fish
+	 * @return the cost associated with fishing this type of fish
 	 *
-	 * Precondition:	none
+	 * @postcondition none
 	 *
-	 * Postcondition:	no change to object
+	 * @precondition no change to object
 	 */
 	public abstract int costToFish();
-	
+
 	@Override
 	public String toString() {
 		return "Size of school: " + this.sizeOfSchool;
 	}
-	
+
 }
