@@ -46,19 +46,19 @@ public class FishingTUI {
 			this.displayMenu();
 			userChoice = this.getIntegerFromUser("Please enter your choice: ");
 			switch (userChoice) {
-			case 1:
-				this.describeCurrentFishingHole();
-				break;
-			case 2:
-				this.describeAngler();
-				break;
-			case 3:
-				this.describeGameBoard();
-				break;
-			case 9:
-				break;
-			default:
-				System.out.println("Invalid choice. Please choose from the following options:");
+				case 1:
+					this.describeCurrentFishingHole();
+					break;
+				case 2:
+					this.describeAngler();
+					break;
+				case 3:
+					this.describeGameBoard();
+					break;
+				case 9:
+					break;
+				default:
+					System.out.println("Invalid choice. Please choose from the following options:");
 			}
 		} while (userChoice != 9);
 		System.out.println("Thank you for playing. Goodbye.");

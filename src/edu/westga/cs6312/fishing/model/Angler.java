@@ -24,6 +24,8 @@ public class Angler {
 	}
 
 	/**
+	 * Method to get the money left in the Angler object
+	 * 
 	 * @return amount of money units left
 	 * 
 	 * @precondition none
@@ -35,6 +37,8 @@ public class Angler {
 	}
 
 	/**
+	 * Method to get the total number of fish caught by the Angler
+	 * 
 	 * @return number of fish caught by the Angler
 	 *
 	 * @precondition none

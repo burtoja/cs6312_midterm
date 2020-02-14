@@ -46,7 +46,7 @@ public abstract class FishType {
 	 * This method removes fish from the school by subtracting the number delivered
 	 * in the parameter from the current number of fish in the school
 	 * 
-	 * @param numberOfFishToRemove
+	 * @param numberOfFishToRemove	the number of fish to remove from the school
 	 *
 	 * @postcondition numberOfFishToRemove >= 0
 	 *

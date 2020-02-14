@@ -11,7 +11,7 @@ package edu.westga.cs6312.fishing.model;
  */
 public class FishingHole {
 	private FishType fishAtHole;
-	int fishingHoleLocation;
+	private int fishingHoleLocation;
 
 	/**
 	 * Constructor for FishingHole objects. Initial location is set from parameter
@@ -104,7 +104,7 @@ public class FishingHole {
 	 */
 	@Override
 	public String toString() {
-		if (getFish() == null) {
+		if (this.getFish() == null) {
 			return this.getLocation() + " containing no fish";
 		} else {
 			return this.getLocation() + " containing " + this.getFish().toString();

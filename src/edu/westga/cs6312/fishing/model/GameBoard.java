@@ -8,9 +8,9 @@ package edu.westga.cs6312.fishing.model;
  *
  */
 public class GameBoard {
-	FishingHole[] fishingHolesArray;
-	Angler theAngler;
-	int anglerLocation;
+	private FishingHole[] fishingHolesArray;
+	private Angler theAngler;
+	private int anglerLocation;
 
 	/**
 	 * Constructor for the GameBoard object

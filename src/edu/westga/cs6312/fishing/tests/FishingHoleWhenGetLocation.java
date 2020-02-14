@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import edu.westga.cs6312.fishing.model.FishingHole;
 
+/**
+ * This will serve as a test of the FishingHole class getLocation method
+ * 
+ * @author J. Allen Burton
+ * @version Feb 14, 2020
+ *
+ */
 public class FishingHoleWhenGetLocation {
 
 	/**
