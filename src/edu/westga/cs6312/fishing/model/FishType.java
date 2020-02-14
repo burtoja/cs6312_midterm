@@ -38,7 +38,7 @@ public abstract class FishType {
 	 *
 	 * @precondition no change to object
 	 */
-	public int getSizeOfSchool() {
+	public int getFishInSchool() {
 		return this.sizeOfSchool;
 	}
 
