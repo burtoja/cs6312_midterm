@@ -13,7 +13,7 @@ import edu.westga.cs6312.fishing.model.Angler;
  * @version Feb 12, 2020
  *
  */
-class AnglerWhenCatchFish {
+public class AnglerWhenCatchFish {
 
 	/**
 	 * This method will test the catchFish method in the Angler class

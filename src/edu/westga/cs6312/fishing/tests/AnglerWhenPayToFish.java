@@ -13,7 +13,7 @@ import edu.westga.cs6312.fishing.model.Angler;
  * @version Feb 12, 2020
  *
  */
-class AnglerWhenPayToFish {
+public class AnglerWhenPayToFish {
 
 	/**
 	 * This method will test the payToFish method in the Angler class 

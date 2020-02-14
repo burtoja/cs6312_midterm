@@ -13,7 +13,7 @@ import edu.westga.cs6312.fishing.model.Angler;
  * @version Feb 12, 2020
  *
  */
-class AnglerWhenGetMoney {
+public class AnglerWhenGetMoney {
 
 	/**
 	 * This method will test the getMoney method in the Angler class by getting the
