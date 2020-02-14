@@ -92,7 +92,9 @@ public class FishingHole {
 	/**
 	 * Creates a string representation of the FishingHole object data. This method
 	 * uses the toString method of the FishType object currently stored in the
-	 * object and the getLocation method within this class.
+	 * object and the getLocation method within this class. The string the location
+	 * and either the contents of the Fish object toString method or a message
+	 * indicating that no fish are in this fishing hole
 	 * 
 	 * @return string representation of the FishingHole object data
 	 *
@@ -102,6 +104,10 @@ public class FishingHole {
 	 */
 	@Override
 	public String toString() {
-		return "" + this.getFish().toString() + "" + this.getLocation();
+		if (getFish() == null) {
+			return this.getLocation() + " containing no fish";
+		} else {
+			return this.getLocation() + " containing " + this.getFish().toString();
+		}
 	}
 }

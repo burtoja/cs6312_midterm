@@ -87,7 +87,7 @@ public abstract class FishType {
 
 	@Override
 	public String toString() {
-		return "Size of school: " + this.sizeOfSchool;
+		return this.sizeOfSchool + " fish in the school";
 	}
 
 }

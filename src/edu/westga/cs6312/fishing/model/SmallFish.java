@@ -66,7 +66,7 @@ public class SmallFish extends FishType {
 	 */
 	@Override
 	public String toString() {
-		return super.toString();
+		return "small fish with " + super.toString();
 	}
 
 }

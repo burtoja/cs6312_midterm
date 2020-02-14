@@ -36,7 +36,6 @@ public class GameBoard {
 	private void setupFishingHoles() {
 		this.theAngler = new Angler();
 		this.fishingHolesArray = new FishingHole[10];
-		// TODO: Need enhanced loop? How to deal with iteration var for constructor
 		for (int currentLocation = 0; currentLocation < 10; currentLocation++) {
 			this.fishingHolesArray[currentLocation] = new FishingHole(currentLocation);
 		}
@@ -82,7 +81,7 @@ public class GameBoard {
 		for (FishingHole currentLocation : this.fishingHolesArray) {
 			gameBoardDescription += currentLocation.toString() + "\n";
 		}
-		gameBoardDescription += "\n" + this.theAngler.toString() + " is at fishing hole " + this.anglerLocation;
+		gameBoardDescription += "\n" + this.theAngler.toString() + " is at fishing hole [" + this.anglerLocation + "]";
 		return gameBoardDescription;
 	}
 }
