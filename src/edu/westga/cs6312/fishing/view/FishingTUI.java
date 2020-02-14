@@ -61,6 +61,7 @@ public class FishingTUI {
 				System.out.println("Invalid choice. Please choose from the following options:");
 			}
 		} while (userChoice != 9);
+		System.out.println("Thank you for playing. Goodbye.");
 	}
 
 	/**
