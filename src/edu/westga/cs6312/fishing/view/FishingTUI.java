@@ -93,32 +93,38 @@ public class FishingTUI {
 		System.out.println(message);
 		return Integer.parseInt(this.userInput.nextLine());
 	}
-	
+
 	/**
+	 * Displays the current fishing hole information: Game board location,
+	 * type/quantity of fish in school (if any)
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition
+	 * @postcondition no change to object
 	 */
 	private void describeCurrentFishingHole() {
-		
+		System.out.println(this.userGameBoard.getCurrentFishingHole().toString());
 	}
-	
+
 	/**
+	 * Displays the Angler's current information: money and fish caught
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition
+	 * @postcondition no change to object
 	 */
 	private void describeAngler() {
-		
+		System.out.println(this.userGameBoard.getAngler().toString());
 	}
-	
+
 	/**
+	 * Prints to console the information about each game board location (game board
+	 * location, type/quantity of fish in school (if any)) and the Angler
+	 * information (money, current location on game board, and fish caught)
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition
+	 * @postcondition no change to object
 	 */
 	private void describeGameBoard() {
 		System.out.println(this.userGameBoard.toString());

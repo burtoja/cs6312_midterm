@@ -41,39 +41,41 @@ public class GameBoard {
 		}
 		this.anglerLocation = 0;
 	}
-	
+
 	/**
 	 * This method gets the current Angler object
 	 * 
-	 * @return	the Angler object for the GameBoard
+	 * @return the Angler object for the GameBoard
 	 *
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition	no change to object
+	 * @postcondition no change to object
 	 */
 	public Angler getAngler() {
 		return this.theAngler;
 	}
-	
+
 	/**
-	 * This method returns the current fishing hole location for the Angler in this object
+	 * This method returns the FishingHole object at the current location of the
+	 * Angler
 	 * 
-	 * @return	game board location of the Angler
+	 * @return the FishingHole object at the current location of the Angler
 	 *
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition	no change to object
+	 * @postcondition no change to object
 	 */
-	public int getFishingHoleLocation() {
-		return this.anglerLocation;
+	public FishingHole getCurrentFishingHole() {
+		return this.fishingHolesArray[this.anglerLocation];
 	}
-	
+
 	/*
-	 * This method will produce a String representation of the variables in the GameBoard object
+	 * This method will produce a String representation of the variables in the
+	 * GameBoard object
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition	no change to object
+	 * @postcondition no change to object
 	 */
 	@Override
 	public String toString() {
@@ -81,7 +83,8 @@ public class GameBoard {
 		for (FishingHole currentLocation : this.fishingHolesArray) {
 			gameBoardDescription += currentLocation.toString() + "\n";
 		}
-		gameBoardDescription += "\n" + this.theAngler.toString() + " is at fishing hole [" + this.anglerLocation + "]";
+		gameBoardDescription += "\nThe " + this.theAngler.toString() + " is at fishing hole [" + this.anglerLocation
+				+ "]";
 		return gameBoardDescription;
 	}
 }
