@@ -23,6 +23,6 @@ public class AnglerWhenGetFishCaught {
 	public void testGetFishCaughtFromNewAnglerExpect0() {
 		Angler theAngler = new Angler();
 		int report = theAngler.getFishCaught();
-		assertEquals(report, 0);
+		assertEquals(0, report);
 	}
 }

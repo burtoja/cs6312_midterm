@@ -26,7 +26,7 @@ public class AnglerWhenCatchFish {
 		Angler theAngler = new Angler();
 		theAngler.catchFish(25);
 		int report = theAngler.getFishCaught();
-		assertEquals(report, 25);
+		assertEquals(25, report);
 	}
 	
 	/**
@@ -40,6 +40,6 @@ public class AnglerWhenCatchFish {
 		Angler theAngler = new Angler();
 		theAngler.catchFish(0);
 		int report = theAngler.getFishCaught();
-		assertEquals(report, 0);
+		assertEquals(0, report);
 	}
 }

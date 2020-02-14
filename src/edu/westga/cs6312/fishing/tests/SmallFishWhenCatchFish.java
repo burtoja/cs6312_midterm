@@ -25,7 +25,7 @@ public class SmallFishWhenCatchFish {
 		SmallFish theSmallFish = new SmallFish();
 		theSmallFish.catchFish();
 		int report = theSmallFish.getFishInSchool();
-		assertEquals(report, 50);
+		assertEquals(50, report);
 	}
 
 }

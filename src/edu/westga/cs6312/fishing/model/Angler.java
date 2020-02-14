@@ -94,6 +94,6 @@ public class Angler {
 	 */
 	@Override
 	public String toString() {
-		return "The Angler with " + this.moneyLeft + " money units and " + this.totalFishCaught + " fish";
+		return "Angler with " + this.moneyLeft + " money units and " + this.totalFishCaught + " fish";
 	}
 }

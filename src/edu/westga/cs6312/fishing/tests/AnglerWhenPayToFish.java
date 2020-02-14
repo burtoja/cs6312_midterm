@@ -26,7 +26,7 @@ public class AnglerWhenPayToFish {
 		Angler theAngler = new Angler();
 		theAngler.payToFish(40);
 		int report = theAngler.getMoney();
-		assertEquals(report, 60);
+		assertEquals(60, report);
 	}
 	
 	/**
@@ -40,7 +40,7 @@ public class AnglerWhenPayToFish {
 		Angler theAngler = new Angler();
 		theAngler.payToFish(0);
 		int report = theAngler.getMoney();
-		assertEquals(report, 100);
+		assertEquals(100, report);
 	}
 	
 	/**
@@ -54,6 +54,6 @@ public class AnglerWhenPayToFish {
 		Angler theAngler = new Angler();
 		theAngler.payToFish(100);
 		int report = theAngler.getMoney();
-		assertEquals(report, 0);
+		assertEquals(0, report);
 	}
 }

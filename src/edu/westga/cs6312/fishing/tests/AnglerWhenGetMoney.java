@@ -23,6 +23,6 @@ public class AnglerWhenGetMoney {
 	public void testGetMoneyFromNewAnglerExpect100() {
 		Angler theAngler = new Angler();
 		int report = theAngler.getMoney();
-		assertEquals(report, 100);
+		assertEquals(100, report);
 	}
 }

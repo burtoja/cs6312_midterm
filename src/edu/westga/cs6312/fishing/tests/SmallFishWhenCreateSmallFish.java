@@ -26,7 +26,7 @@ public class SmallFishWhenCreateSmallFish {
 	public void testCreateNewSmallFishExpectSize100() {
 		SmallFish theSmallFish = new SmallFish();
 		String report = theSmallFish.toString();
-		assertEquals(report, "Size of school: 100");
+		assertEquals("small fish with 100 fish in the school", report);
 	}
 
 }

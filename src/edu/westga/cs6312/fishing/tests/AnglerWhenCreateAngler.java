@@ -23,6 +23,6 @@ public class AnglerWhenCreateAngler {
 	public void testCreateNewAnglerExpectFish0Money100() {
 		Angler theAngler = new Angler();
 		String report = theAngler.toString();
-		assertEquals(report, "Total Fish Caught: 0\tMoney Left: 100");
+		assertEquals("Angler with 100 money units and 0 fish", report);
 	}
 }

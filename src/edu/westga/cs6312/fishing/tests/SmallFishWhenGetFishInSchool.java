@@ -23,7 +23,7 @@ public class SmallFishWhenGetFishInSchool {
 	public void testGetFishInSchoolExpect100() {
 		SmallFish theSmallFish = new SmallFish();
 		int report = theSmallFish.getFishInSchool();
-		assertEquals(report, 100);
+		assertEquals(100, report);
 	}
 
 }

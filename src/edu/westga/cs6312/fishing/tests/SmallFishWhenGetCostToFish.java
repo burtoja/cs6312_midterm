@@ -24,7 +24,7 @@ public class SmallFishWhenGetCostToFish {
 	public void testCostToFishExpect25() {
 		SmallFish theSmallFish = new SmallFish();
 		int report = theSmallFish.costToFish();
-		assertEquals(report, 25);
+		assertEquals(25, report);
 	}
 
 }
