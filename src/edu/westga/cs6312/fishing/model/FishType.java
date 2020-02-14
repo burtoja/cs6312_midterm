@@ -10,7 +10,7 @@ package edu.westga.cs6312.fishing.model;
  */
 
 public abstract class FishType {
-	int sizeOfSchool;
+	private int sizeOfSchool;
 
 	/**
 	 * Constructor for objects of type FishType
