@@ -51,16 +51,24 @@ public class FishingHole {
 	}
 
 	/**
-	 * This method will create and return a new SmallFish object
+	 * This method will create and return a new FishType object randomly selected
+	 * between SmallFish and LargeFish subclasses. Each has a 50% chance of being
+	 * selected.
 	 * 
-	 * @return new SmallFish object
+	 * @return new FishType object of either SmallFish or LargeFish type
 	 *
 	 * @precondition none
 	 *
 	 * @postcondition the FishingHole object is not changed
 	 */
-	private SmallFish addFish() {
-		return new SmallFish();
+	private FishType addFish() {
+		FishType fishToAdd;
+		if (Math.random() < 0.5) {
+			fishToAdd = new LargeFish();
+		} else {
+			fishToAdd = new SmallFish();
+		}
+		return fishToAdd;
 	}
 
 	/**
