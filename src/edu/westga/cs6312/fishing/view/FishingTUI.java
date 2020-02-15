@@ -55,6 +55,9 @@ public class FishingTUI {
 				case 3:
 					this.describeGameBoard();
 					break;
+				case 4:
+					this.move();
+					break;
 				case 9:
 					break;
 				default:
@@ -76,6 +79,7 @@ public class FishingTUI {
 		System.out.println("\t| 1 - Describe current fishing hole     |");
 		System.out.println("\t| 2 - Describe angler                   |");
 		System.out.println("\t| 3 - Describe game board               |");
+		System.out.println("\t| 4 - Move Angler                       |");
 		System.out.println("\t| 9 - Quit                              |");
 		System.out.println("\t-----------------------------------------");
 	}
@@ -129,6 +133,35 @@ public class FishingTUI {
 	 */
 	private void describeGameBoard() {
 		System.out.println(this.userGameBoard.toString());
+	}
+
+	/**
+	 * This method presents users with a choice of moving the Angler up or down one
+	 * position on the GameBoard 
+	 *
+	 * @precondition	none
+	 *
+	 * @postcondition	moves the location of the Angler in the GameBoard object
+	 */
+	private void move() {
+		int moveChoice;
+		System.out.println("\n\t--------------");
+		System.out.println("\t| 1 - Up     |");
+		System.out.println("\t| 2 - Down   |");
+		System.out.println("\t--------------");
+		moveChoice = this.getIntegerFromUser("Please enter your choice: ");
+		switch (moveChoice) {
+			case 1:
+				this.userGameBoard.moveUp();
+				this.describeCurrentFishingHole();				
+				break;
+			case 2:
+				this.userGameBoard.moveDown();
+				this.describeCurrentFishingHole();
+				break;
+			default:
+				System.out.println("You have entered an invalid choice.  The Angler was not moved.");
+		}	
 	}
 
 }
