@@ -160,7 +160,7 @@ public class FishingTUI {
 				this.describeCurrentFishingHole();
 				break;
 			default:
-				System.out.println("You have entered an invalid choice.  The Angler was not moved.");
+				System.out.println("Invalid direction number.  The Angler was not moved. Returning to main menu.");
 		}	
 	}
 
