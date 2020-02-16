@@ -118,4 +118,42 @@ public class FishingHole {
 			return this.getLocation() + " containing " + this.getFish().toString();
 		}
 	}
+
+	/**
+	 * Executes actions to fish the hole. If not fish are at hole or zero fish are
+	 * caught (only a possibility for LargeFish) then the Angler is not charged a
+	 * fee for the attempt. Otherwise the appropriate number of fish are removed
+	 * from the school and added to the Anglers catch total. The appropriate funds
+	 * are subtracted from the Angler's money
+	 * 
+	 * @param anglerFishingTheHole the Angler object doing the fishing
+	 * 
+	 * @return message describing result of fishing attempt
+	 *
+	 * @precondition Angler must have enough money, there must be a FishType at the
+	 *               location, and FishType must have enough fish in the school to
+	 *               meet catch quantity
+	 *
+	 * @postcondition Angler has money reduced by cost to fish, Angler has total
+	 *                number of fish caught increased by amount caught at this hole,
+	 *                and FishType has number in school reduced by amount caught
+	 */
+	public String fishTheHole(Angler anglerFishingTheHole) {
+		String statusMessage = "";
+		int numberOfFishCaught = 0;
+		if (anglerFishingTheHole.getMoney() < this.fishAtHole.costToFish()) {
+			statusMessage = "The Angler does not have enough money to fish this hole.  ";
+		} else {
+			numberOfFishCaught = this.fishAtHole.catchFish();
+		}
+		if (numberOfFishCaught == 0) {
+			statusMessage += "No fish were caught";
+		} else {
+			anglerFishingTheHole.catchFish(numberOfFishCaught);
+			anglerFishingTheHole.payToFish(this.fishAtHole.costToFish());
+			statusMessage = "The Angler has " + anglerFishingTheHole.getMoney()
+					+ " money remaining and has caught a total of " + anglerFishingTheHole.getFishCaught() + " fish";
+		}
+		return statusMessage;
+	}
 }

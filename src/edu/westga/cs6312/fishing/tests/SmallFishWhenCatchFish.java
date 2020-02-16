@@ -17,15 +17,44 @@ public class SmallFishWhenCatchFish {
 
 	/**
 	 * Test the catchFish method using the getFishInSchool method to verify size of
-	 * school after method is called. The default value of 50 fish caught is the
-	 * only value available so only one test is needed.
+	 * school after method is called. The default value of 50 fish caught is used once.
+	 * Expect 50
 	 */
 	@Test
-	public void testCatchFishWhenNewSchoolHas50CaughtExpect50() {
+	public void testCatchFishWhenNewSchool50CaughtExpect50() {
 		SmallFish theSmallFish = new SmallFish();
 		theSmallFish.catchFish();
 		int report = theSmallFish.getFishInSchool();
 		assertEquals(50, report);
+	}
+	
+	/**
+	 * Test the catchFish method using the getFishInSchool method to verify size of
+	 * school after method is called. The default value of 50 fish caught is used twice.
+	 * Expect 0
+	 */
+	@Test
+	public void testCatchFishWhenNewSchool100CaughtExpect0() {
+		SmallFish theSmallFish = new SmallFish();
+		theSmallFish.catchFish();
+		theSmallFish.catchFish();
+		int report = theSmallFish.getFishInSchool();
+		assertEquals(0, report);
+	}
+	
+	/**
+	 * Test the catchFish method using the getFishInSchool method to verify size of
+	 * school after method is called. The default value of 50 fish caught is used three times.
+	 * Expect 0
+	 */
+	@Test
+	public void testCatchFishWhenNewSchoolAttemptToCatch150Expect0() {
+		SmallFish theSmallFish = new SmallFish();
+		theSmallFish.catchFish();
+		theSmallFish.catchFish();
+		theSmallFish.catchFish();
+		int report = theSmallFish.getFishInSchool();
+		assertEquals(0, report);
 	}
 
 }

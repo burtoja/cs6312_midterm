@@ -29,14 +29,18 @@ public class LargeFish extends FishType {
 	 * 
 	 * @return the number of fish removed from the school
 	 *
-	 * @precondition none
+	 * @precondition number of fish in school >= number of fish to be caught
 	 *
 	 * @postcondition removes between zero and all fish from school
 	 */
 	@Override
 	public int catchFish() {
 		int numberOfFishCaught = (int) (Math.random() * (this.getFishInSchool() + 1));
-		super.removeFish(numberOfFishCaught);
+		if (numberOfFishCaught <= this.getFishInSchool()) {
+			super.removeFish(numberOfFishCaught);
+		} else {
+			numberOfFishCaught = 0;
+		}
 		return numberOfFishCaught;
 	}
 

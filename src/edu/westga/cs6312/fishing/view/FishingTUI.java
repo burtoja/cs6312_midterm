@@ -58,6 +58,9 @@ public class FishingTUI {
 				case 4:
 					this.move();
 					break;
+				case 5:
+					this.fishTheHole();
+					break;
 				case 9:
 					break;
 				default:
@@ -80,6 +83,7 @@ public class FishingTUI {
 		System.out.println("\t| 2 - Describe angler                   |");
 		System.out.println("\t| 3 - Describe game board               |");
 		System.out.println("\t| 4 - Move Angler                       |");
+		System.out.println("\t| 5 - Fish the Hole                     |");
 		System.out.println("\t| 9 - Quit                              |");
 		System.out.println("\t-----------------------------------------");
 	}
@@ -162,6 +166,25 @@ public class FishingTUI {
 			default:
 				System.out.println("Invalid direction number.  The Angler was not moved. Returning to main menu.");
 		}	
+	}
+	
+	/**
+	 * This method will execute the actions needed for the Anger to fish the current FishingHole
+	 *
+	 * @precondition	Angler has enough money
+	 * 					
+	 *
+	 * @postcondition	money is removed from the Angler
+	 * 					fish added to Angler
+	 * 					fish removed from the school found at the hole
+	 */
+	private void fishTheHole() {
+		if (this.userGameBoard.getCurrentFishingHole().getFish().getFishInSchool() > 0) {
+			System.out.println(this.userGameBoard.getCurrentFishingHole().fishTheHole(this.userGameBoard.getAngler()));
+		} else {
+			System.out.println("No fish present");
+		}
+		
 	}
 
 }

@@ -17,9 +17,9 @@ public abstract class FishType {
 	 *
 	 * @param initialSizeOfSchool the initial number of fish in the school
 	 *
-	 * @postcondition initialSizeOfSchool >= 0
+	 * @precondition initialSizeOfSchool >= 0
 	 *
-	 * @precondition FishType object created with the size of the school set to
+	 * @postcondition FishType object created with the size of the school set to
 	 *               initialSizeOfSchool
 	 */
 	public FishType(int initialSizeOfSchool) {
@@ -34,9 +34,9 @@ public abstract class FishType {
 	 * 
 	 * @return number of fish in the school
 	 *
-	 * @postcondition none
+	 * @precondition none
 	 *
-	 * @precondition no change to object
+	 * @postcondition no change to object
 	 */
 	public int getFishInSchool() {
 		return this.sizeOfSchool;
@@ -48,14 +48,14 @@ public abstract class FishType {
 	 * 
 	 * @param numberOfFishToRemove	the number of fish to remove from the school
 	 *
-	 * @postcondition numberOfFishToRemove >= 0
+	 * @precondition numberOfFishToRemove >= 0
 	 *
-	 * @precondition the number of fish in the school is deceased by
+	 * @postcondition the number of fish in the school is deceased by
 	 *               numberOfFishToRemove
 	 */
 	public void removeFish(int numberOfFishToRemove) {
 		if (numberOfFishToRemove < 0) {
-			throw new IllegalArgumentException("Invalid initial fish school size.  This must not be a negative value.");
+			throw new IllegalArgumentException("Invalid number of fish to remove.  This must not be a negative value.");
 		}
 		this.sizeOfSchool -= numberOfFishToRemove;
 	}
@@ -67,9 +67,9 @@ public abstract class FishType {
 	 * 
 	 * @return number of fish caught
 	 *
-	 * @postcondition none
+	 * @precondition none
 	 *
-	 * @precondition sizeOfSchool will decrease by the amount of fish caught
+	 * @postcondition sizeOfSchool will decrease by the amount of fish caught
 	 */
 	public abstract int catchFish();
 
@@ -79,12 +79,12 @@ public abstract class FishType {
 	 * 
 	 * @return the cost associated with fishing this type of fish
 	 *
-	 * @postcondition none
+	 * @precondition none
 	 *
-	 * @precondition no change to object
+	 * @postcondition no change to object
 	 */
 	public abstract int costToFish();
-
+	
 	@Override
 	public String toString() {
 		return this.sizeOfSchool + " fish in the school";

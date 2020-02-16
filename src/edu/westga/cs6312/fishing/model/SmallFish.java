@@ -30,14 +30,18 @@ public class SmallFish extends FishType {
 	 * 
 	 * @return	the number of fish removed from the school
 	 *
-	 * @precondition	none
+	 * @precondition	number of fish in school >= number of fish to be caught
 	 *
 	 * @postcondition	removes 50 fish from school
 	 */
 	@Override
 	public int catchFish() {
 		int numberOfFishCaught = 50;
-		super.removeFish(numberOfFishCaught);
+		if (numberOfFishCaught <= this.getFishInSchool()) {
+			super.removeFish(numberOfFishCaught);
+		} else {
+			numberOfFishCaught = 0;
+		}
 		return numberOfFishCaught;
 	}
 
