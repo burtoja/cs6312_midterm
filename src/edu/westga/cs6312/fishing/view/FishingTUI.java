@@ -141,11 +141,11 @@ public class FishingTUI {
 
 	/**
 	 * This method presents users with a choice of moving the Angler up or down one
-	 * position on the GameBoard 
+	 * position on the GameBoard
 	 *
-	 * @precondition	none
+	 * @precondition none
 	 *
-	 * @postcondition	moves the location of the Angler in the GameBoard object
+	 * @postcondition moves the location of the Angler in the GameBoard object
 	 */
 	private void move() {
 		int moveChoice;
@@ -157,7 +157,7 @@ public class FishingTUI {
 		switch (moveChoice) {
 			case 1:
 				this.userGameBoard.moveUp();
-				this.describeCurrentFishingHole();				
+				this.describeCurrentFishingHole();
 				break;
 			case 2:
 				this.userGameBoard.moveDown();
@@ -165,26 +165,28 @@ public class FishingTUI {
 				break;
 			default:
 				System.out.println("Invalid direction number.  The Angler was not moved. Returning to main menu.");
-		}	
+		}
 	}
-	
+
 	/**
-	 * This method will execute the actions needed for the Anger to fish the current FishingHole
+	 * This method will initiate and then display the results of the actions needed
+	 * for the Angler to fish the current FishingHole
 	 *
-	 * @precondition	Angler has enough money
-	 * 					
+	 * @precondition Angler has enough money and there enough fish in the hole to fish
+	 * 
 	 *
-	 * @postcondition	money is removed from the Angler
-	 * 					fish added to Angler
-	 * 					fish removed from the school found at the hole
+	 * @postcondition if the Angler has enough money and the hole has enough fish,
+	 *                money is removed from the Angler, fish are added to Angler,
+	 *                and fish are removed from the school found at the hole
 	 */
 	private void fishTheHole() {
-		if (this.userGameBoard.getCurrentFishingHole().getFish().getFishInSchool() > 0) {
+		if (this.userGameBoard.getCurrentFishingHole().getFish() != null
+				&& this.userGameBoard.getCurrentFishingHole().getFish().getFishInSchool() > 0) {
 			System.out.println(this.userGameBoard.getCurrentFishingHole().fishTheHole(this.userGameBoard.getAngler()));
 		} else {
 			System.out.println("No fish present");
 		}
-		
+
 	}
 
 }
