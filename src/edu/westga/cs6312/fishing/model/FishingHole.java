@@ -128,7 +128,7 @@ public class FishingHole {
 	 * 
 	 * @param anglerFishingTheHole the Angler object doing the fishing
 	 * 
-	 * @return message describing result of fishing attempt
+	 * @return String message describing result of fishing attempt
 	 *
 	 * @precondition Angler must have enough money, there must be a FishType at the
 	 *               location, and FishType must have enough fish in the school to
