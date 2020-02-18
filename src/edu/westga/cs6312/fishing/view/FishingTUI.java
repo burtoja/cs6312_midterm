@@ -37,7 +37,7 @@ public class FishingTUI {
 	 *
 	 * @precondition none
 	 *
-	 * @postcondition changes to the object dictated by private methods within run()
+	 * @postcondition changes to the object dictated by private methods within this method
 	 */
 	public void run() {
 		System.out.println("Welcome to Down by the Fishin' Hole");
@@ -153,7 +153,7 @@ public class FishingTUI {
 		System.out.println("\t| 1 - Up     |");
 		System.out.println("\t| 2 - Down   |");
 		System.out.println("\t--------------");
-		moveChoice = this.getIntegerFromUser("Please enter your choice: ");
+		moveChoice = this.getIntegerFromUser("Please enter the number corresponding to the direction you to move the Angler: ");
 		switch (moveChoice) {
 			case 1:
 				this.userGameBoard.moveUp();
