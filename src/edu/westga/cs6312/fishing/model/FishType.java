@@ -20,7 +20,7 @@ public abstract class FishType {
 	 * @precondition initialSizeOfSchool >= 0
 	 *
 	 * @postcondition FishType object created with the size of the school set to
-	 *               initialSizeOfSchool
+	 *                initialSizeOfSchool
 	 */
 	public FishType(int initialSizeOfSchool) {
 		if (initialSizeOfSchool < 0) {
@@ -46,16 +46,21 @@ public abstract class FishType {
 	 * This method removes fish from the school by subtracting the number delivered
 	 * in the parameter from the current number of fish in the school
 	 * 
-	 * @param numberOfFishToRemove	the number of fish to remove from the school
+	 * @param numberOfFishToRemove the number of fish to remove from the school
 	 *
-	 * @precondition numberOfFishToRemove >= 0
+	 * @precondition numberOfFishToRemove >= 0 && numberOfFishToRemove <=
+	 *               sizeOfSchool
 	 *
 	 * @postcondition the number of fish in the school is deceased by
-	 *               numberOfFishToRemove
+	 *                numberOfFishToRemove
 	 */
 	public void removeFish(int numberOfFishToRemove) {
 		if (numberOfFishToRemove < 0) {
 			throw new IllegalArgumentException("Invalid number of fish to remove.  This must not be a negative value.");
+		}
+		if (numberOfFishToRemove > this.sizeOfSchool) {
+			throw new IllegalArgumentException(
+					"Invalid number of fish to remove. Cannot remove more fish than are currently in the school");
 		}
 		this.sizeOfSchool -= numberOfFishToRemove;
 	}
@@ -84,7 +89,7 @@ public abstract class FishType {
 	 * @postcondition no change to object
 	 */
 	public abstract int costToFish();
-	
+
 	@Override
 	public String toString() {
 		return this.sizeOfSchool + " fish in the school";
