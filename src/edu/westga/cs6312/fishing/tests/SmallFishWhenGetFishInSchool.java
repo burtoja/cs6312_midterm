@@ -26,4 +26,16 @@ public class SmallFishWhenGetFishInSchool {
 		assertEquals(100, report);
 	}
 
+	/**
+	 * Test the getFishInSchool method for a newly created SmallFish object after
+	 * having all fish removed.
+	 */
+	@Test
+	public void testGetFishInSchoolAfterAllRemovedExpect0() {
+		SmallFish theSmallFish = new SmallFish();
+		theSmallFish.removeFish(100);
+		int report = theSmallFish.getFishInSchool();
+		assertEquals(0, report);
+	}
+
 }
