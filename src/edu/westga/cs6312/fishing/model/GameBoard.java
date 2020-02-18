@@ -33,8 +33,8 @@ public class GameBoard {
 	 * 
 	 * @precondition none
 	 *
-	 * @postcondition new Angler object created fishingHolesArray is populated with
-	 *                FishingHole objects theAngler is assigned to location 0
+	 * @postcondition new Angler object created, fishingHolesArray is populated with
+	 *                FishingHole objects, and theAngler is assigned to location 0
 	 */
 	private void setupFishingHoles() {
 		this.theAngler = new Angler();
