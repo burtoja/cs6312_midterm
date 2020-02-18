@@ -16,6 +16,8 @@ public class FishingHole {
 	/**
 	 * Constructor for FishingHole objects. Initial location is set from parameter
 	 * passed to constructor and fish at hole is determined through a random draw.
+	 * It can either be empty (no fish) or have fish. If it has fish then it is
+	 * equally likely to have small vs. large fish types.
 	 *
 	 * @param fishingHoleLocation location of the fishing hole on the game board
 	 *
@@ -100,9 +102,9 @@ public class FishingHole {
 	/**
 	 * Creates a string representation of the FishingHole object data. This method
 	 * uses the toString method of the FishType object currently stored in the
-	 * object and the getLocation method within this class. The string the location
-	 * and either the contents of the Fish object toString method or a message
-	 * indicating that no fish are in this fishing hole
+	 * object and the getLocation method within this class. The string includes the
+	 * location and either the contents of the Fish object toString method or a
+	 * message indicating that no fish are in this fishing hole
 	 * 
 	 * @return string representation of the FishingHole object data
 	 *
@@ -120,11 +122,11 @@ public class FishingHole {
 	}
 
 	/**
-	 * Executes actions to fish the hole. If not fish are at hole or zero fish are
-	 * caught (only a possibility for LargeFish) then the Angler is not charged a
-	 * fee for the attempt. Otherwise the appropriate number of fish are removed
-	 * from the school and added to the Anglers catch total. The appropriate funds
-	 * are subtracted from the Angler's money
+	 * Executes actions to fish the hole. If no fish are at hole or zero fish are
+	 * caught then the Angler is not charged a fee for the attempt. Otherwise the
+	 * appropriate number of fish are removed from the school and added to the
+	 * Anglers catch total. The appropriate funds are subtracted from the Angler's
+	 * money.
 	 * 
 	 * @param anglerFishingTheHole the Angler object doing the fishing
 	 * 
