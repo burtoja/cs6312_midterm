@@ -37,14 +37,15 @@ public class FishingTUI {
 	 *
 	 * @precondition none
 	 *
-	 * @postcondition changes to the object dictated by private methods within this method
+	 * @postcondition changes to the object dictated by private methods within this
+	 *                method
 	 */
 	public void run() {
 		System.out.println("Welcome to Down by the Fishin' Hole");
 		int userChoice;
 		do {
 			this.displayMenu();
-			userChoice = this.getIntegerFromUser("Please enter your choice: ");
+			userChoice = this.getIntegerFromUser("Please enter your choice from the menu: ");
 			switch (userChoice) {
 				case 1:
 					this.describeCurrentFishingHole();
@@ -153,7 +154,7 @@ public class FishingTUI {
 		System.out.println("\t| 1 - Up     |");
 		System.out.println("\t| 2 - Down   |");
 		System.out.println("\t--------------");
-		moveChoice = this.getIntegerFromUser("Please enter the number corresponding to the direction you to move the Angler: ");
+		moveChoice = this.getIntegerFromUser("Please enter your choice for which way to move: ");
 		switch (moveChoice) {
 			case 1:
 				this.userGameBoard.moveUp();
@@ -172,7 +173,8 @@ public class FishingTUI {
 	 * This method will initiate and then display the results of the actions needed
 	 * for the Angler to fish the current FishingHole
 	 *
-	 * @precondition Angler has enough money and there enough fish in the hole to fish
+	 * @precondition Angler has enough money and there enough fish in the hole to
+	 *               fish
 	 * 
 	 *
 	 * @postcondition if the Angler has enough money and the hole has enough fish,
